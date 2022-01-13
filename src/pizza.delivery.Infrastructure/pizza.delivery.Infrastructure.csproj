@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DependencyInjection\IServiceFactory.cs" />
+    <Compile Remove="DependencyInjection\ServiceCollectionExtensions.cs" />
+    <Compile Remove="DependencyInjection\ServiceFactory.cs" />
+    <Compile Remove="DependencyInjection\ServiceProviderExtensions.cs" />
+    <Compile Remove="DependencyInjection\ServiceScopeExtensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Confluent.Kafka" Version="1.8.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
+    <PackageReference Include="MySqlConnector" Version="2.0.0" />
+  </ItemGroup>
+
+</Project>

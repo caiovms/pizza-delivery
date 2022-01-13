@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Extensions\**" />
+    <Compile Remove="Factories\**" />
+    <Compile Remove="Migrations\**" />
+    <EmbeddedResource Remove="Extensions\**" />
+    <EmbeddedResource Remove="Factories\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <None Remove="Extensions\**" />
+    <None Remove="Factories\**" />
+    <None Remove="Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="PizzaDeliveryReadonlyDbContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\pizza.delivery.Domain.Models\pizza.delivery.Domain.Models.csproj" />
+    <ProjectReference Include="..\pizza.delivery.Infrastructure\pizza.delivery.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
